@@ -7,8 +7,8 @@ $installer->startSetup();
 
 //Add attributes
 
-$installer->addAttribute('catalog_category', 'umm_cat_block_right', array(
-	'group'				=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_block_right', array(
+	'group'				=> 'MegaMenu',
 	'label'				=> 'Block Right',
 	'note'				=> "This field is applicable only for top-level categories.",
 	'type'				=> 'text',
@@ -26,8 +26,8 @@ $installer->addAttribute('catalog_category', 'umm_cat_block_right', array(
 	'is_html_allowed_on_front'	=> true,
 	'global'			=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
 ));
-$installer->addAttribute('catalog_category', 'umm_cat_block_proportions', array(
-	'group'				=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_block_proportions', array(
+	'group'				=> 'MegaMenu',
 	'label'				=> 'Proportions: Subcategories / Block Right',
 	'note'				=> "Proportions between block of subcategories and Block Right. This field is applicable only for top-level categories.",
 	'type'				=> 'varchar',
@@ -47,8 +47,8 @@ $installer->addAttribute('catalog_category', 'umm_cat_block_proportions', array(
 	'global'			=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_cat_block_top', array(
-	'group'				=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_block_top', array(
+	'group'				=> 'MegaMenu',
 	'label'				=> 'Block Top',
 	'type'				=> 'text',
 	'input'				=> 'textarea',
@@ -66,8 +66,8 @@ $installer->addAttribute('catalog_category', 'umm_cat_block_top', array(
 	'global'			=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_cat_block_bottom', array(
-	'group'				=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_block_bottom', array(
+	'group'				=> 'MegaMenu',
 	'label'				=> 'Block Bottom',
 	'type'				=> 'text',
 	'input'				=> 'textarea',
@@ -85,8 +85,8 @@ $installer->addAttribute('catalog_category', 'umm_cat_block_bottom', array(
 	'global'			=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_cat_label', array(
-	'group'				=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_label', array(
+	'group'				=> 'MegaMenu',
 	'label'				=> 'Category Label',
 	'note'				=> "Labels have to be defined in menu settings",
 	'type'				=> 'varchar',

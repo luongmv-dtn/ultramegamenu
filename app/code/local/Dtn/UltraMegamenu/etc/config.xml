@@ -24,13 +24,13 @@
 		<category>
 			<collection>
 				<attributes>
-					<umm_dd_type />
-					<umm_dd_width />
-					<umm_dd_proportions />
-					<umm_dd_columns />
-					<umm_dd_blocks />
-					<umm_cat_target />
-					<umm_cat_label />
+					<dtn_umm_dd_type />
+					<dtn_umm_dd_width />
+					<dtn_umm_dd_proportions />
+					<dtn_umm_dd_columns />
+					<dtn_umm_dd_blocks />
+					<dtn_umm_cat_target />
+					<dtn_umm_cat_label />
 				</attributes>
 			</collection>
 		</category>
@@ -56,7 +56,7 @@
 			</ultramegamenu_mysql4>-->
 		</models>
 		<resources>
-			<ultramegamenu_setup>
+			<dtn_ultramegamenu_setup>
 				<setup>
 					<module>Dtn_UltraMegamenu</module>
 					<!--<class>Dtn_UltraMegamenu_Model_Resource_Mysql4_Setup</class>-->
@@ -65,7 +65,7 @@
 				<connection>
 					<use>core_setup</use>
 				</connection>
-			</ultramegamenu_setup>
+			</dtn_ultramegamenu_setup>
 			<ultramegamenu_write>
 				<connection>
 					<use>core_write</use>

@@ -139,7 +139,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 		//Get dropdown type attribute.
 		//Apply constraints of dropdown types: inheritance and order of types.
 		//IMPORTANT: these constraints have to be applied just after retrieving value of the dropdown type!
-		$ddType = intval($cat->getData('umm_dd_type')); //Dropdown type
+		$ddType = intval($cat->getData('dtn_umm_dd_type')); //Dropdown type
 
 		if ($ddType === self::DDTYPE_NONE)
 		{
@@ -215,7 +215,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 		//Retrieve category blocks
 		if ($getCatBlocks)
 		{
-			$ddBlocks_raw = $this->_getCatBlock($cat, "umm_dd_blocks");
+			$ddBlocks_raw = $this->_getCatBlock($cat, "dtn_umm_dd_blocks");
 
 			//If attribute value not empty/null
 			if ($ddBlocks_raw)
@@ -229,7 +229,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 		//TODO: maybe it's good to check if there are any subcategories. If no subcat. and no category blocks, then no need to execute this code.
 		if (FALSE === $this->_isSimpleSidemenu && $ddType === self::DDTYPE_MEGA)
 		{
-			$ddProportions_raw = $cat->getData("umm_dd_proportions"); //Dropdown block proportions
+			$ddProportions_raw = $cat->getData("dtn_umm_dd_proportions"); //Dropdown block proportions
 
 			//Calculate grid units for category blocks (left and right) and submenu with subcategories (central column)
 			if ($ddProportions_raw)
@@ -425,7 +425,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 				//Number of columns with subcategories
 				//Create column classes which will be used to arrange in columns all the items on the level below.
 				//Important: subcategory column classes have to be added directly to the submenu (because of selectors structure).
-				$ddSubcatColsCount = intval($cat->getData("umm_dd_columns"));
+				$ddSubcatColsCount = intval($cat->getData("dtn_umm_dd_columns"));
 				if ($ddSubcatColsCount === 0)
 				{
 					$ddSubcatColsCount = 4; //Default width of mega mdropdown is full-width so 4 is resonable default number of columns
@@ -453,7 +453,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 			}
 
 			//Dropdown width
-			if ($ddWidth_raw = $cat->getData("umm_dd_width"))
+			if ($ddWidth_raw = $cat->getData("dtn_umm_dd_width"))
 			{
 				//Evaluate dropdown width
 				$panelWidthStyle = '';
@@ -559,7 +559,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 
 		//Category URL
 		//Check if there is a custom target URL for the category
-		if ($catTarget_raw = $cat->getData("umm_cat_target"))
+		if ($catTarget_raw = $cat->getData("dtn_umm_cat_target"))
 		{
 			if ($catTarget_raw === "#")
 			{
@@ -1045,7 +1045,7 @@ class Dtn_UltraMegamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 	 */
 	protected function _getCategoryLabelHtml($cat, $level)
 	{
-		$catLabelKey = $cat->getData('umm_cat_label');
+		$catLabelKey = $cat->getData('dtn_umm_cat_label');
 		
 		if ($catLabelKey)
 		{

@@ -99,7 +99,7 @@ class Dtn_UltraMegamenu_Helper_Data extends Mage_Core_Helper_Abstract
         else
         {
             //Check if the top menu exists
-            if (Mage::registry('umm_top_menu_exists'))
+            if (Mage::registry('dtn_umm_top_menu_exists'))
             {
                 return false;
             }

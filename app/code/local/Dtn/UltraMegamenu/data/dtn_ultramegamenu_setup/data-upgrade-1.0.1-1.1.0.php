@@ -7,8 +7,8 @@ $installer->startSetup();
 
 //Add attributes
 
-$installer->addAttribute('catalog_category', 'umm_dd_type', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_dd_type', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Submenu Type',
 	'note'					=> 'If category has subcategories, choose how subcategories should be displayed. For details refer to the user guide, chapter: 13. Menu',
 
@@ -33,8 +33,8 @@ $installer->addAttribute('catalog_category', 'umm_dd_type', array(
 	'sort_order'			=> 110,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_dd_width', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_dd_width', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Drop-down Width',
 	'note'					=> "Override default width of the drop-down box. Enter value in pixels, e.g. 150px, or as a percentage of the containing block's width, e.g. 200%.",
 
@@ -58,8 +58,8 @@ $installer->addAttribute('catalog_category', 'umm_dd_width', array(
 	'sort_order'			=> 120,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_dd_proportions', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_dd_proportions', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Drop-down Content Proportions',
 	'note'					=> 'Proportions between sections of drop-down box: Left Block, subcategories, Right Block. For each section, enter value in grid units (number between 0 and 12). Sum of the grid units entered for all three sections has to be equal 12.',
 
@@ -83,8 +83,8 @@ $installer->addAttribute('catalog_category', 'umm_dd_proportions', array(
 	'sort_order'			=> 130,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_dd_columns', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_dd_columns', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Number of Columns With Subcategories',
 	'note'					=> "Applicable only for categories with Submenu Type 'Mega drop-down'. E.g. select 3 to display subcategories in three columns. Default value is 4.",
 
@@ -109,8 +109,8 @@ $installer->addAttribute('catalog_category', 'umm_dd_columns', array(
 	'sort_order'			=> 140,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_dd_blocks', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_dd_blocks', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Category Blocks',
 	'note'					=> '',
 
@@ -134,34 +134,8 @@ $installer->addAttribute('catalog_category', 'umm_dd_blocks', array(
 	'sort_order'			=> 300,
 ));
 
-$installer->addAttribute('catalog_category', 'umm_cat_label', array(
-	'group'				=> 'Menu',
-	'label'				=> 'Category Label',
-	'note'				=> "Labels have to be defined in menu settings",
-
-	'backend'			=> '',
-	'type'				=> 'varchar',
-	'frontend'			=> '',
-	'input'				=> 'select',
-	//'input_renderer'	=> '',
-	//'frontend_class'	=> '',
-	'source'			=> 'ultramegamenu/category_attribute_source_categorylabel',
-
-	'user_defined'		=> true,
-	'required'			=> false,
-	'visible'			=> true,
-	'searchable'		=> false,
-	'filterable'		=> false,
-	'comparable'		=> false,
-	'visible_on_front'	=> true,
-	'wysiwyg_enabled'	=> false,
-	'is_html_allowed_on_front' => false,
-	'global'			=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
-	'sort_order'		=> 500,
-));
-
-$installer->addAttribute('catalog_category', 'umm_cat_target', array(
-	'group'					=> 'Menu',
+$installer->addAttribute('catalog_category', 'dtn_umm_cat_target', array(
+	'group'					=> 'MegaMenu',
 	'label'					=> 'Custom URL',
 	'note'					=> "Enter hash (#) to make this category not clickable. To create a custom link (which will replace category link), enter custom URL path. Path will be appended to store's base URL to create a new link. Leave this field empty if no changes are needed.",
 
@@ -184,6 +158,13 @@ $installer->addAttribute('catalog_category', 'umm_cat_target', array(
 	'global'				=> Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
 	'sort_order'			=> 600,
 ));
+
+
+
+//Update attributes
+
+$installer->updateAttribute('catalog_category', 'dtn_umm_cat_label', null, null, 500);
+Mage::log("Menu upgraded", null, "Dtn_UltraMegamenu.log");
 
 
 
