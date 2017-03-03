@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <config>
 	<tabs>
-		<infortis translate="label">
-			<label>Infortis Extensions</label>
+		<dtn_megamenu translate="label">
+			<label>Dtn MegaMenu Extensions</label>
 			<sort_order>152</sort_order>
-		</infortis>
+		</dtn_megamenu>
 	</tabs>
 	<sections>
 		<ultramegamenu translate="label">
 			<label>Menu</label>
-			<tab>infortis</tab>
+			<tab>dtn_megamenu</tab>
 			<frontend_type>text</frontend_type>
 			<sort_order>100</sort_order>
 			<show_in_default>1</show_in_default>
@@ -61,7 +61,7 @@
 						<heading_vertical_dropdown_menu translate="label">
 							<label>Vertical Layout</label>
 							<comment>The top menu displayed inside a drop-down box.</comment>
-							<frontend_model>infortis/adminhtml_system_config_form_field_heading</frontend_model>
+							<frontend_model>ultramegamenu/adminhtml_system_config_form_field_heading</frontend_model>
 							<sort_order>100</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -95,7 +95,7 @@
 						<heading_home_link translate="label">
 							<label>Home Link</label>
 							<comment>An icon and text "Home", displayed as a standard menu item.</comment>
-							<frontend_model>infortis/adminhtml_system_config_form_field_heading</frontend_model>
+							<frontend_model>ultramegamenu/adminhtml_system_config_form_field_heading</frontend_model>
 							<sort_order>200</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -275,7 +275,7 @@
 						<heading_enable translate="label">
 							<label>Enable Sidebar Menu</label>
 							<comment>Enable the sidebar menu for different types of pages.</comment>
-							<frontend_model>infortis/adminhtml_system_config_form_field_heading</frontend_model>
+							<frontend_model>ultramegamenu/adminhtml_system_config_form_field_heading</frontend_model>
 							<sort_order>0</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
@@ -412,7 +412,7 @@
                         <heading_accordion_settings translate="label">
                             <label>Accordion Settings</label>
 							<comment>If the "Sidebar Mega Menu" is not enabled, the sidebar menu will be displayed as a simple accordion.</comment>
-							<frontend_model>infortis/adminhtml_system_config_form_field_heading</frontend_model>
+							<frontend_model>ultramegamenu/adminhtml_system_config_form_field_heading</frontend_model>
                             <sort_order>300</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
